@@ -3025,10 +3025,10 @@ react-is@^16.13.1, react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-live-clock@^6.1.13:
-  version "6.1.13"
-  resolved "https://registry.yarnpkg.com/react-live-clock/-/react-live-clock-6.1.13.tgz#0c1a7b8cce34ae14634924a8a5a40579191ed033"
-  integrity sha512-Dmt5EvEH/du0iWXrfQDHZPP88sj/mYmoqdixNa7COxgeYUzAKBoricLh5/z1ZPvU+ErDgFo742oNeqnfWXsWKA==
+react-live-clock@^6.1.14:
+  version "6.1.14"
+  resolved "https://registry.yarnpkg.com/react-live-clock/-/react-live-clock-6.1.14.tgz#c7a396b164f1d650eb961dc6e3961971463dcedd"
+  integrity sha512-p9zZkw1uE/XGgYPXttdLeU/d4W6JiiCRW8XW4ZREbrqsInTj/SxdncaFPfC73umv9JAQwzKhgUf3eXR+8h3heA==
   dependencies:
     moment "^2.29.1"
     moment-timezone "^0.5.33"
