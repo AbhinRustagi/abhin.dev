@@ -23,6 +23,10 @@ body {
   );
 }
 
+p {
+  @apply text-lg leading-relaxed;
+}
+
 h1,
 h2,
 h3,
