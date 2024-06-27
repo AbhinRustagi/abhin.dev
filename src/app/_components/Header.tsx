@@ -3,7 +3,9 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="mb-10">
-      <div className="font-sans font-semibold text-3xl mb-2">Abhin Rustagi</div>
+      <div className="font-sans font-extrabold text-2xl mb-2">
+        Abhin Rustagi
+      </div>
       <nav>
         <ul className="flex gap-4">
           <li>
