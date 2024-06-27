@@ -23,7 +23,8 @@ body {
   );
 }
 
-p {
+p,
+li {
   @apply text-lg leading-relaxed;
 }
 

@@ -7,24 +7,13 @@ export default function Header() {
       <nav>
         <ul className="flex gap-4">
           <li>
-            <Link className="" href="/">
-              Home
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link className="" href="/about">
-              About
-            </Link>
+            <Link href="/projects">Projects</Link>
           </li>
           <li>
-            <Link className="" href="/blog">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link className="" href="/projects">
-              Projects
-            </Link>
+            <Link href="/blog">Blog</Link>
           </li>
         </ul>
       </nav>
