@@ -1,0 +1,38 @@
+[
+  {
+    "type": "mini",
+    "title": "FavQuote",
+    "description": "Public website to save intriguing quotes I read from different books & sources.",
+    "href": ""
+  },
+  {
+    "type": "mini",
+    "title": "Weeks Calendar",
+    "description": "",
+    "href": ""
+  },
+  {
+    "type": "mini",
+    "title": "Finding Donors",
+    "description": "",
+    "href": ""
+  },
+  {
+    "type": "mini",
+    "title": "Random Name Generator",
+    "description": "",
+    "href": ""
+  },
+  {
+    "type": "mini",
+    "title": "Vanilla Online Editor",
+    "description": "",
+    "href": ""
+  },
+  {
+    "type": "mini",
+    "title": "IMDb Sentiment Analysis",
+    "description": "",
+    "href": ""
+  }
+]
