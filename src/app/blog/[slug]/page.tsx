@@ -1,4 +1,5 @@
 import { generateMetadata as generateDefaultMetadata } from "@/lib/metadata";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: { slug: string };
@@ -11,11 +12,21 @@ export async function generateMetadata(props: Props) {
 }
 
 export default function Page() {
-  return <></>;
+  // Fetch data else notFound()
+  // notFound();
+
+  return (
+    <>
+      <h1 className="mb-4"></h1>
+      <div dangerouslySetInnerHTML={{ __html: "" }} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {
-  // const posts = await fetch("https://.../posts").then((res) => res.json());
+  const { tree } = await fetch(
+    "https://api.github.com/repos/AbhinRustagi/blog/git/trees/main?recursive=1"
+  ).then((res) => res.json());
 
-  return [];
+  return tree.map((post: any) => ({ slug: post?.path }));
 }
