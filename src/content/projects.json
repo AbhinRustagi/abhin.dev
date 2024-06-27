@@ -34,5 +34,28 @@
     "title": "IMDb Sentiment Analysis",
     "description": "",
     "href": ""
+  },
+  {
+    "type": "big",
+    "title": "Huddle",
+    "description": "(In Progress) Social events listing app for the UniMelb students to check out everything that's going around campus from one source."
+  },
+  {
+    "type": "big",
+    "title": "Stylo Stationery",
+    "description": "Catalogue website for my dad's office stationery brand in India.",
+    "href": "https://www.stylostationery.com"
+  },
+  {
+    "type": "big",
+    "title": "PoTD",
+    "description": "Inspired by <a class='underline' href='https://photos.ben.page/'>Ben Page's Photo of the Day</a> where I click one photo for every day.",
+    "href": ""
+  },
+  {
+    "type": "big",
+    "title": "Internship Fair Portal",
+    "description": "An online portal used by 600+ students to find internships on the annual Internship Fair event of Sri Venkateswara College.",
+    "href": ""
   }
 ]
