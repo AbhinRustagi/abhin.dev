@@ -1,0 +1,51 @@
+.renderer {
+  @apply mt-8 mb-20;
+}
+
+.renderer strong {
+  @apply font-bold;
+}
+
+.renderer em {
+  @apply italic;
+}
+
+.renderer p:not(:last-child) {
+  @apply mb-4;
+}
+
+.renderer a {
+  @apply underline;
+}
+
+.renderer pre {
+  @apply my-6 rounded-md bg-neutral-400/30 p-4 text-sm break-all overflow-auto;
+}
+
+.renderer pre code {
+  @apply break-all overflow-auto;
+}
+
+.renderer p code {
+  @apply rounded-md bg-neutral-400/30 relative p-1 text-sm break-all overflow-auto;
+}
+
+.renderer blockquote {
+  @apply p-4 rounded-md bg-neutral-400/30 mb-4 text-sm;
+}
+
+.renderer blockquote p {
+  @apply text-base;
+}
+
+.renderer h2 {
+  @apply text-xl mb-4;
+}
+
+.renderer h3 {
+  @apply text-lg mb-4;
+}
+
+.renderer ul {
+  @apply mb-4 pl-4 list-disc;
+}
