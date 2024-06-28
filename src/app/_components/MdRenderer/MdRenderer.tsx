@@ -5,10 +5,13 @@ interface MdRendererProps {
 }
 
 export function MdRenderer({ content }: MdRendererProps) {
+  // Convert anchor links to external
+  const modifiedContent = content.replaceAll("<a", "<a target='_blank'");
+
   return (
     <div
       className={styles.renderer}
-      dangerouslySetInnerHTML={{ __html: content }}
+      dangerouslySetInnerHTML={{ __html: modifiedContent }}
     />
   );
 }

@@ -15,7 +15,7 @@
 }
 
 .renderer a {
-  @apply underline;
+  @apply underline text-blue-600;
 }
 
 .renderer pre {
