@@ -7,7 +7,7 @@ export const metadata = generateMetadata({ title: "Blog" });
 
 export default async function Page() {
   const posts = await getAllPosts();
-  const organizedPosts = groupPostsByDate(posts.reverse());
+  const organizedPosts = groupPostsByDate(posts);
 
   return (
     <React.Fragment>

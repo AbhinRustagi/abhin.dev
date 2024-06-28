@@ -9,13 +9,37 @@ export default function Page() {
   return (
     <React.Fragment>
       <h2 className="text-2xl mb-4">Work Experience</h2>
-      <ul className="pl-4 list-disc mb-8">
+      <p className="my-4">
+        On a mission to build and innovate products that users love. Here is a
+        summary of my work so far.
+      </p>
+      <ul className="mb-8">
         {data.map((exp) => (
-          <li className="mb-4" key={exp.org}>
-            <Link className="underline text-blue-600" href={exp.website}>
-              {exp.org}
-            </Link>{" "}
-            ({exp.duration}): {exp.description}
+          <li
+            className="[&:not(:last-child)]:mb-4 [&:not(:last-child)]:border-b [&:not(:first-child)]mt-4 pb-4 border-b-neutral-200"
+            key={exp.org}
+          >
+            <div>
+              <Link target="_blank" className="underline" href={exp.website}>
+                {exp.org}
+              </Link>{" "}
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="inline"
+              >
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <p>
+              {exp.description} ({exp.duration})
+            </p>
           </li>
         ))}
       </ul>

@@ -14,17 +14,23 @@ export default function Footer() {
       <p>
         You can also socialize with me elsewhere –{" "}
         <Link
+          target="_blank"
           className="underline"
           href="https://www.linkedin.com/in/abhinrustagi"
         >
           LinkedIn
         </Link>
         ,{" "}
-        <Link className="underline" href="https://www.github.com/AbhinRustagi">
+        <Link
+          target="_blank"
+          className="underline"
+          href="https://www.github.com/AbhinRustagi"
+        >
           Github
         </Link>{" "}
         &{" "}
         <Link
+          target="_blank"
           className="underline"
           href="https://www.twitter.com/@abhinrustagi"
         >

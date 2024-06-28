@@ -46,7 +46,11 @@ export default function Page() {
             >
               {project.title}
             </Link>
-            : {project.description}
+            :{" "}
+            <div
+              className="inline"
+              dangerouslySetInnerHTML={{ __html: project.description }}
+            />
           </li>
         ))}
       </ul>

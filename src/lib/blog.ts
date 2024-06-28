@@ -23,9 +23,18 @@ export async function getAllPosts() {
   return Promise.all(posts);
 }
 
+const sortPosts = (posts: any) =>
+  posts.sort((a: any, b: any) => {
+    const date1 = new Date(a.publishDate);
+    const date2 = new Date(b.publishDate);
+    return date2.getTime() / 1000 - date1.getTime() / 1000;
+  });
+
 export function groupPostsByDate(posts: any[]) {
   const groupedList: { date: string; posts: any[] }[] = [];
   const dateIndexMap: { [k in string]: number } = {};
+
+  sortPosts(posts);
 
   posts.forEach((post) => {
     const postDate = new Date(post.publishDate);
