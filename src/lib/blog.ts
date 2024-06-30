@@ -24,8 +24,8 @@ export async function getAllPosts(): Promise<IPost[]> {
   const posts = tree
     .filter((node: any) => {
       const filename = node.path as string;
-      // Expect only Markdown Files
-      return filename.endsWith(".md");
+      // Expect only (Non Readme) Markdown Files
+      return filename !== "README.md" && filename.endsWith(".md");
     })
     .map(async (node: any) => {
       const slug = node.path.replace(".md", "");
