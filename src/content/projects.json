@@ -32,8 +32,9 @@
   {
     "type": "big",
     "title": "Huddle",
-    "description": "(In Progress) Social events app for UniMelb students to check on-campus activities from one source.",
-    "href": ""
+    "description": "Social events app for UniMelb students to check on-campus activities from one source.",
+    "href": "",
+    "status": "in progress"
   },
   {
     "type": "big",
@@ -50,7 +51,8 @@
   {
     "type": "big",
     "title": "Internship Fair Portal",
-    "description": "(depr) An online portal used by 600+ students to find internships for the annual Internship Fair at Sri Venkateswara College.",
+    "description": "An online portal used by 600+ students to find internships for the annual Internship Fair at Sri Venkateswara College.",
+    "status": "retired",
     "href": ""
   }
 ]
