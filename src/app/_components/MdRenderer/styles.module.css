@@ -14,10 +14,6 @@
   @apply mb-4;
 }
 
-.renderer a {
-  @apply underline text-blue-600;
-}
-
 .renderer pre {
   @apply my-6 rounded-md bg-neutral-400/30 p-4 text-sm break-all overflow-auto;
 }

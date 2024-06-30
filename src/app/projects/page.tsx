@@ -20,7 +20,7 @@ export default function Page() {
             <Link
               target={project.href && "_blank"}
               href={project.href || "#"}
-              className="underline text-blue-600"
+              className="underline text-accent"
             >
               {project.title}
             </Link>
@@ -42,7 +42,7 @@ export default function Page() {
             <Link
               target={project.href && "_blank"}
               href={project.href || "#"}
-              className="underline text-blue-600"
+              className="underline text-accent"
             >
               {project.title}
             </Link>

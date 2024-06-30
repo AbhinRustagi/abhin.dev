@@ -45,7 +45,7 @@ export default function Page() {
       </ul>
       <p>
         You can find my complete resume{" "}
-        <Link className="underline text-blue-600" target="_blank" href="">
+        <Link className="underline text-accent" target="_blank" href="">
           here
         </Link>
         .

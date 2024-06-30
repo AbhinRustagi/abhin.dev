@@ -2,25 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-neutral-900 font-serif;
+* {
+  transition: 0.15s ease-in-out;
+}
 
-  background: hsla(0, 0%, 90%, 1);
-  background: linear-gradient(
-    0deg,
-    hsla(0, 0%, 90%, 1) 0%,
-    hsla(0, 0%, 98%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    0deg,
-    hsla(0, 0%, 90%, 1) 0%,
-    hsla(0, 0%, 98%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    hsla(0, 0%, 90%, 1) 0%,
-    hsla(0, 0%, 98%, 1) 100%
-  );
+body {
+  @apply text-neutral-900 font-serif bg-neutral-50 dark:bg-neutral-900 dark:text-neutral-200;
 }
 
 p,
@@ -32,13 +19,17 @@ h1,
 h2,
 h3,
 h4 {
-  @apply font-sans text-gray-950 font-extrabold;
+  @apply font-sans text-gray-950 font-extrabold dark:text-neutral-50;
 }
 
 ::selection {
-  @apply bg-blue-600 text-white;
+  @apply bg-blue-400 text-white;
 }
 
-a:hover {
-  text-decoration: underline;
+a {
+  @apply text-accent dark:text-darkAccent;
+}
+
+.after-underline {
+  @apply relative hover:after:h-full after:transition hover:after:bg-accent dark:hover:after:bg-darkAccent hover:text-neutral-50 dark:hover:text-neutral-900 hover:after:top-0 after:-z-10 after:absolute after:h-px after:bottom-0 after:w-full after:dark:bg-neutral-400/40 after:bg-neutral-500/40 after:left-0;
 }
