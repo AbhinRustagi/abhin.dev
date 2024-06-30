@@ -40,7 +40,6 @@ export function generateMetadata(
       title: resultTitle,
       description: params?.description || description,
     },
-
     openGraph: {
       title: resultTitle,
       type: "website",

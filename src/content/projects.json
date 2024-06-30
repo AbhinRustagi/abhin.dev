@@ -14,32 +14,26 @@
   {
     "type": "mini",
     "title": "Finding Donors",
-    "description": "",
-    "href": ""
-  },
-  {
-    "type": "mini",
-    "title": "Random Name Generator",
-    "description": "",
+    "description": "Classification project using multiple supervised algorithms to predict charity donations based on fictional demographic data.",
     "href": ""
   },
   {
     "type": "mini",
     "title": "Vanilla Online Editor",
-    "description": "",
+    "description": "An online HTML, CSS & JS editor for on the fly code sandboxing!",
     "href": ""
   },
   {
     "type": "mini",
     "title": "IMDb Sentiment Analysis",
-    "description": "",
+    "description": "ANN trained on IMDb movie review dataset to classifys whether a review is positive or negative.",
     "href": ""
   },
   {
     "type": "big",
     "title": "Huddle",
-    "description": "(In Progress) Social events listing app for UniMelb students to check out everything that's going around campus from one source.",
-    "href": "#"
+    "description": "(In Progress) Social events app for UniMelb students to check on-campus activities from one source.",
+    "href": ""
   },
   {
     "type": "big",
@@ -56,7 +50,7 @@
   {
     "type": "big",
     "title": "Internship Fair Portal",
-    "description": "An online portal used by 600+ students to find internships on the annual Internship Fair event of Sri Venkateswara College.",
+    "description": "(depr) An online portal used by 600+ students to find internships for the annual Internship Fair at Sri Venkateswara College.",
     "href": ""
   }
 ]
