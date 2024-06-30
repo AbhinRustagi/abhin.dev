@@ -42,3 +42,11 @@ strong {
 a {
   @apply relative after:absolute after:h-px after:w-full after:bg-transparent after:left-0 after:right-0 after:top-full after:bottom-0 hover:after:bg-gray-400/50;
 }
+
+.card-base {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(21, 24, 24, 0.25);
+  @apply rounded-md p-6;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}

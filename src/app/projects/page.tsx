@@ -4,55 +4,49 @@ import Link from "next/link";
 
 export const metadata = generateMetadata({ title: "Projects" });
 
+function Card({
+  title,
+  href,
+  description,
+}: {
+  title: string;
+  href: string;
+  description: string;
+}) {
+  return (
+    <div className="card-base h-full">
+      <div className="mb-2 h-8">
+        <Link className="font-medium" target={href && "_blank"} href={href}>
+          {title}
+        </Link>
+      </div>
+      <div
+        className="inline"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+    </div>
+  );
+}
+
 export default function Page() {
   const miniProjects = data.filter((project) => project.type === "mini");
   const bigProjects = data.filter((project) => project.type === "big");
 
   return (
     <>
-      <h2 className="text-2xl mb-4">Big projects 🍗</h2>
-      <ul className="pb-4 border-b border-b-gray-700">
+      <h2 className="text-2xl mb-8">Big projects 🍗</h2>
+      <ul className="grid grid-rows-2 gap-4 grid-cols-2 relative h-full">
         {bigProjects.map((project) => (
-          <li
-            key={`${project.type}-${project.title.toLowerCase()}`}
-            className="mb-6"
-          >
-            <div>
-              <Link
-                className="font-medium"
-                target={project.href && "_blank"}
-                href={project.href || "#"}
-              >
-                {project.title}
-              </Link>
-            </div>
-            <div
-              className="inline"
-              dangerouslySetInnerHTML={{ __html: project.description }}
-            />
+          <li key={`${project.type}-${project.title.toLowerCase()}`}>
+            <Card {...project} />
           </li>
         ))}
       </ul>
-      <h2 className="text-2xl mt-12 mb-4">Bite-sized projects 🍪</h2>
-      <ul className="mb-12">
+      <h2 className="text-2xl my-8">Bite-sized projects 🍪</h2>
+      <ul className="pb-6 grid grid-rows-2 gap-4 grid-cols-2 relative h-full">
         {miniProjects.map((project) => (
-          <li
-            key={`${project.type}-${project.title.toLowerCase()}`}
-            className="mb-6"
-          >
-            <div>
-              <Link
-                target={project.href && "_blank"}
-                href={project.href || "#"}
-                className="font-medium"
-              >
-                {project.title}
-              </Link>
-            </div>
-            <div
-              className="inline"
-              dangerouslySetInnerHTML={{ __html: project.description }}
-            />
+          <li key={`${project.type}-${project.title.toLowerCase()}`}>
+            <Card {...project} />
           </li>
         ))}
       </ul>
