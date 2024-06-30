@@ -11,20 +11,21 @@ export default function Page() {
   return (
     <>
       <h2 className="text-2xl mb-4">Big projects 🍗</h2>
-      <ul className="list-disc pl-4">
+      <ul className="pb-4 border-b border-b-gray-700">
         {bigProjects.map((project) => (
           <li
             key={`${project.type}-${project.title.toLowerCase()}`}
-            className="mb-3"
+            className="mb-6"
           >
-            <Link
-              target={project.href && "_blank"}
-              href={project.href || "#"}
-              className="underline text-accent"
-            >
-              {project.title}
-            </Link>
-            :{" "}
+            <div>
+              <Link
+                className="font-medium"
+                target={project.href && "_blank"}
+                href={project.href || "#"}
+              >
+                {project.title}
+              </Link>
+            </div>
             <div
               className="inline"
               dangerouslySetInnerHTML={{ __html: project.description }}
@@ -32,21 +33,22 @@ export default function Page() {
           </li>
         ))}
       </ul>
-      <h2 className="text-2xl mt-8 mb-4">Bite-sized projects 🍪</h2>
-      <ul className="list-disc pl-4">
+      <h2 className="text-2xl mt-12 mb-4">Bite-sized projects 🍪</h2>
+      <ul className="mb-12">
         {miniProjects.map((project) => (
           <li
             key={`${project.type}-${project.title.toLowerCase()}`}
-            className="mb-3"
+            className="mb-6"
           >
-            <Link
-              target={project.href && "_blank"}
-              href={project.href || "#"}
-              className="underline text-accent"
-            >
-              {project.title}
-            </Link>
-            :{" "}
+            <div>
+              <Link
+                target={project.href && "_blank"}
+                href={project.href || "#"}
+                className="font-medium"
+              >
+                {project.title}
+              </Link>
+            </div>
             <div
               className="inline"
               dangerouslySetInnerHTML={{ __html: project.description }}

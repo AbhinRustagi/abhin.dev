@@ -7,29 +7,38 @@
 }
 
 body {
-  @apply text-neutral-900 font-serif bg-neutral-50 dark:bg-neutral-900 dark:text-neutral-200;
+  background: rgb(9, 9, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(9, 9, 11, 1) 0%,
+    rgb(3, 15, 19) 50%,
+    rgba(9, 9, 11, 1) 100%
+  );
+  @apply text-gray-400 min-h-screen;
 }
 
 p,
 li {
-  @apply text-lg leading-relaxed;
+  @apply leading-relaxed font-light;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  @apply font-sans text-gray-950 font-extrabold dark:text-neutral-50;
+  @apply text-gray-100 font-semibold;
 }
 
 ::selection {
-  @apply bg-blue-400 text-white;
+  @apply bg-gray-100 text-gray-800;
+}
+
+a,
+a:hover,
+strong {
+  @apply text-gray-100 font-medium;
 }
 
 a {
-  @apply text-accent dark:text-darkAccent;
-}
-
-.after-underline {
-  @apply relative hover:after:h-full after:transition hover:after:bg-accent dark:hover:after:bg-darkAccent hover:text-neutral-50 dark:hover:text-neutral-900 hover:after:top-0 after:-z-10 after:absolute after:h-px after:bottom-0 after:w-full after:dark:bg-neutral-400/40 after:bg-neutral-500/40 after:left-0;
+  @apply relative after:absolute after:h-px after:w-full after:bg-transparent after:left-0 after:right-0 after:top-full after:bottom-0 hover:after:bg-gray-400/50;
 }

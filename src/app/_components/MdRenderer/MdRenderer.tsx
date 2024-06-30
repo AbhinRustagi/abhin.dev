@@ -6,10 +6,7 @@ interface MdRendererProps {
 
 export function MdRenderer({ content }: MdRendererProps) {
   // Convert anchor links to external
-  const modifiedContent = content.replaceAll(
-    "<a",
-    "<a target='_blank' class='after-underline'"
-  );
+  const modifiedContent = content.replaceAll("<a", "<a target='_blank'");
 
   return (
     <div

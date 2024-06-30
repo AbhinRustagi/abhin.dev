@@ -1,12 +1,12 @@
 import { generateMetadata } from "@/lib/metadata";
-import { Lora, Inter_Tight } from "next/font/google";
+import { Lora, Inter } from "next/font/google";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import "./globals.css";
 
-const inter = Inter_Tight({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter-tight",
+  variable: "--font-inter",
 });
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${lora.variable}`}>
-      <body className="mx-auto my-20 w-full max-w-[40rem] md:px-0 px-6">
+      <body className="mx-auto py-20 w-full max-w-[40rem] md:px-0 px-6">
         <Header />
         <main>{children}</main>
         <Footer />

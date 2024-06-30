@@ -16,11 +16,11 @@ export default function Page() {
       <ul className="mb-8">
         {data.map((exp) => (
           <li
-            className="[&:not(:last-child)]:mb-4 [&:not(:last-child)]:border-b [&:not(:first-child)]mt-4 pb-4 border-b-neutral-200"
+            className="[&:not(:last-child)]:mb-8 [&:not(:last-child)]:border-b [&:not(:first-child)]mt-8 pb-8 border-b-gray-800"
             key={exp.org}
           >
             <div>
-              <Link target="_blank" className="underline" href={exp.website}>
+              <Link target="_blank" href={exp.website}>
                 {exp.org}
               </Link>{" "}
               <svg
@@ -45,7 +45,7 @@ export default function Page() {
       </ul>
       <p>
         You can find my complete resume{" "}
-        <Link className="underline text-accent" target="_blank" href="">
+        <Link target="_blank" href="">
           here
         </Link>
         .

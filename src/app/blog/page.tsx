@@ -17,13 +17,11 @@ export default async function Page() {
       <ul>
         {organizedPosts.map((groupedPosts) => (
           <React.Fragment key={groupedPosts.date}>
-            <div className="font-sans mb-2 text-neutral-500 uppercase text-sm">
-              {groupedPosts.date}
-            </div>
+            <div className="font-sans mb-2 text-sm">{groupedPosts.date}</div>
             {groupedPosts.posts.map((item) => (
               <li key={item.slug} className="mb-6">
                 <div>
-                  <Link className="underline" href={`/blog/${item.slug}`}>
+                  <Link className="font-medium" href={`/blog/${item.slug}`}>
                     {item.title}
                   </Link>
                 </div>

@@ -2,10 +2,6 @@
   @apply mt-8 mb-20;
 }
 
-.renderer strong {
-  @apply font-bold;
-}
-
 .renderer em {
   @apply italic;
 }

@@ -8,7 +8,9 @@ export default async function Page() {
 
   return (
     <React.Fragment>
-      <MdRenderer content={content} />
+      <div className="my-20">
+        <MdRenderer content={content} />
+      </div>
     </React.Fragment>
   );
 }

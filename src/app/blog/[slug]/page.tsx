@@ -18,7 +18,9 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <h1 className="mb-4 text-2xl">{data.metadata?.title}</h1>
-      <MdRenderer content={data.content} />
+      <div className="text-gray-300">
+        <MdRenderer content={data.content} />
+      </div>
     </>
   );
 }

@@ -1,51 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const routes = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+];
 
 export default function Header() {
-  useEffect(() => {
-    if (
-      localStorage.getItem("color-theme") === "dark" ||
-      (!("color-theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  const switchTheme = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.removeItem("color-theme");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("color-theme", "dark");
-    }
-  };
+  const pathname = usePathname();
 
   return (
     <header className="mb-10">
-      <div className="font-sans font-extrabold text-2xl mb-2">
+      <div className="font-semibold text-lg mb-2 text-gray-100">
         Abhin Rustagi
       </div>
       <nav>
         <ul className="flex gap-4">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/work">Work</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <button onClick={switchTheme}>Switch</button>
+          {routes.map((route) => {
+            const isActive = route.href.split("/")[1] == pathname.split("/")[1];
+
+            return (
+              <li key={route.name}>
+                <Link
+                  className={`font-light ${
+                    isActive ? "text-gray-200 font-medium" : "text-gray-400"
+                  }`}
+                  href={route.href}
+                >
+                  {route.name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

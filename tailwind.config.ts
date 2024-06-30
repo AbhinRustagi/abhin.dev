@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
-import colors from "tailwindcss/colors";
 
 const config: Config = {
   darkMode: ["class"],
@@ -8,12 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter-tight)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         serif: ["var(--font-lora)", ...defaultTheme.fontFamily.serif],
-      },
-      colors: {
-        darkAccent: colors.lime["300"],
-        accent: colors.blue["500"],
       },
     },
   },
