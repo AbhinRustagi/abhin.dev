@@ -41,3 +41,7 @@
 .renderer ul {
   @apply mb-4 pl-4 list-disc;
 }
+
+.renderer img {
+  @apply my-6 w-full object-contain;
+}

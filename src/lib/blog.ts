@@ -16,7 +16,7 @@ export async function getAllPosts() {
       slug,
       title: post.metadata?.title,
       readingTime: post.metadata?.readingTime,
-      publishDate: (post.metadata?.publishDate as Date).toDateString(),
+      publishDate: post.metadata?.publishDate,
     };
   });
 
@@ -71,9 +71,13 @@ export async function getPost(slug: string) {
     });
 
   const parsedMdContent = matter(mdContent);
+  const content = parsedMdContent.content.replaceAll(
+    "(/images/",
+    "(https://raw.githubusercontent.com/AbhinRustagi/blog/main/images/"
+  );
 
   return {
-    content: await parse(parsedMdContent.content),
+    content: await parse(content),
     metadata: parsedMdContent.data,
   };
 }
