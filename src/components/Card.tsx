@@ -1,6 +1,6 @@
+import { IProject, StatusType } from "@/lib/project";
 import Link from "next/link";
-
-type StatusType = "retired" | "in progress";
+import ExtLink from "./ExtLink";
 
 interface StatusProps {
   type: StatusType;
@@ -23,12 +23,7 @@ const Status = (props: StatusProps) => {
   );
 };
 
-interface CardProps {
-  title: string;
-  href: string;
-  description: string;
-  status?: StatusType;
-}
+interface CardProps extends IProject {}
 
 export default function Card(props: CardProps) {
   return (
@@ -36,20 +31,7 @@ export default function Card(props: CardProps) {
       {props.status && <Status type={props.status} />}
       <div className="mb-2 h-8">
         <Link className="font-medium" target="_blank" href={props.href}>
-          {props.title}{" "}
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="inline"
-          >
-            <path
-              d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-              fill="currentColor"
-            ></path>
-          </svg>
+          {props.title} <ExtLink />
         </Link>
       </div>
       <div

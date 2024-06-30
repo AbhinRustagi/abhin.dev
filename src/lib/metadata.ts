@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const title = "Abhin Rustagi";
 const description = "";
-const url = "";
+const url = "https://www.abhin.dev/";
 
 interface GenerateMetadataParameters {
   title?: string;

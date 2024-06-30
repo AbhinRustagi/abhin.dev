@@ -1,4 +1,4 @@
-import { MdRenderer } from "@/app/_components/MdRenderer/MdRenderer";
+import { MdRenderer } from "@/components/MdRenderer/MdRenderer";
 import { getAllPosts, getPost } from "@/lib/blog";
 import { generateMetadata as generateDefaultMetadata } from "@/lib/metadata";
 

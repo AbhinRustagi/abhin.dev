@@ -1,7 +1,5 @@
+import { MdRenderer } from "@/components/MdRenderer/MdRenderer";
 import { getHomeData } from "@/lib/home";
-import Link from "next/link";
-import React from "react";
-import { MdRenderer } from "../_components/MdRenderer/MdRenderer";
 import Image from "next/image";
 
 export default async function Page() {
