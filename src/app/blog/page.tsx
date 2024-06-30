@@ -10,7 +10,7 @@ export default async function Page() {
   const organizedPosts = groupPostsByDate(posts);
 
   return (
-    <React.Fragment>
+    <section>
       <p className="mb-8">
         I occasionally pen down my thoughts on tech, and things I learn.
       </p>
@@ -30,6 +30,6 @@ export default async function Page() {
           </React.Fragment>
         ))}
       </ul>
-    </React.Fragment>
+    </section>
   );
 }

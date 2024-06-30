@@ -16,12 +16,12 @@ export default async function Page({ params }: Props) {
   const data = await getPost(params.slug);
 
   return (
-    <>
+    <section>
       <h1 className="mb-4 text-2xl">{data.metadata?.title}</h1>
       <div className="text-gray-300">
         <MdRenderer content={data.content} />
       </div>
-    </>
+    </section>
   );
 }
 
