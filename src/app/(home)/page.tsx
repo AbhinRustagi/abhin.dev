@@ -3,7 +3,7 @@ import { getHomeData } from "@/lib/home";
 import Image from "next/image";
 
 export default async function Page() {
-  const content = await getHomeData();
+  const parsed = await getHomeData();
 
   return (
     <section>
@@ -16,7 +16,10 @@ export default async function Page() {
           alt=""
           src="/abhin.jpg"
         />
-        <MdRenderer content={content} />
+        <h1 className="text-4xl">
+          Product-focused Software Engineer based in Melbourne.
+        </h1>
+        <MdRenderer content={parsed.content} />
       </div>
     </section>
   );

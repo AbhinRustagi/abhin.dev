@@ -12,7 +12,7 @@ body {
 
 p,
 li {
-  @apply leading-relaxed text-lg;
+  @apply leading-relaxed text-lg font-light;
 }
 
 h1,

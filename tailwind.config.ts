@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-dm-sans)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-outfit)", ...defaultTheme.fontFamily.sans],
         serif: ["var(--font-vidaloka)", ...defaultTheme.fontFamily.serif],
       },
     },
