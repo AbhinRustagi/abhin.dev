@@ -7,40 +7,33 @@
 }
 
 body {
-  background: rgb(9, 9, 11);
-  background: linear-gradient(
-    135deg,
-    rgba(9, 9, 11, 1) 0%,
-    rgb(3, 15, 19) 50%,
-    rgba(9, 9, 11, 1) 100%
-  );
-  @apply text-gray-400 min-h-screen;
+  @apply min-h-screen bg-stone-100 text-stone-700;
 }
 
 p,
 li {
-  @apply leading-relaxed font-light;
+  @apply leading-relaxed text-lg;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  @apply text-gray-100 font-semibold font-serif;
+  @apply font-serif text-stone-900 leading-loose;
 }
 
 ::selection {
-  @apply bg-gray-100 text-gray-800;
+  @apply bg-stone-900 text-stone-100;
 }
 
 a,
 a:hover,
 strong {
-  @apply text-gray-100 font-medium;
+  @apply font-medium text-stone-800;
 }
 
-a {
-  @apply relative after:absolute after:h-px after:w-full after:bg-transparent after:left-0 after:right-0 after:top-full after:bottom-0 hover:after:bg-gray-400/50;
+a.underline {
+  @apply relative after:absolute after:h-px after:w-full after:bg-transparent after:left-0 after:right-0 after:top-full after:bottom-0 after:bg-stone-800/30;
 }
 
 .card-base {

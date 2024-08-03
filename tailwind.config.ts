@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-dm-sans)", ...defaultTheme.fontFamily.sans],
-        serif: ["var(--font-libre-bodoni)", ...defaultTheme.fontFamily.serif],
+        serif: ["var(--font-vidaloka)", ...defaultTheme.fontFamily.serif],
       },
     },
   },

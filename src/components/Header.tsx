@@ -22,11 +22,11 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="mb-10">
-      <div className="font-semibold text-lg mb-2 text-gray-100">
+    <header className="mb-10 pb-6 border-b">
+      <div className="text-4xl text-center mb-2 font-serif text-stone-900">
         Abhin Rustagi
       </div>
-      <nav>
+      <nav className="flex justify-center">
         <ul className="flex gap-4">
           {routes.map((route) => {
             const isActive = route.href.split("/")[1] == pathname.split("/")[1];
@@ -34,9 +34,7 @@ export default function Header() {
             return (
               <li key={route.name}>
                 <Link
-                  className={`font-light ${
-                    isActive ? "text-gray-200 font-medium" : "text-gray-400"
-                  }`}
+                  className={`uppercase text-sm ${isActive ? "font-bold" : ""}`}
                   href={route.href}
                 >
                   {route.name}

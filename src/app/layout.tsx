@@ -1,12 +1,16 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { generateMetadata } from "@/lib/metadata";
-import { Libre_Bodoni, DM_Sans } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { DM_Sans, Vidaloka } from "next/font/google";
 import "./globals.css";
+config.autoAddCss = false;
 
-const libreBodoni = Libre_Bodoni({
+const vidaloka = Vidaloka({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-libre-bodoni",
+  variable: "--font-vidaloka",
 });
 
 const dmSans = DM_Sans({
@@ -22,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${libreBodoni.variable} ${dmSans.variable}`}>
-      <body className="mx-auto py-20 w-full max-w-[40rem] md:px-0 px-6">
+    <html lang="en" className={`${vidaloka.variable} ${dmSans.variable}`}>
+      <body className="mx-auto pt-6 pb-20 w-full max-w-[36rem] md:px-0 px-6">
         <Header />
         <main>{children}</main>
         <Footer />
