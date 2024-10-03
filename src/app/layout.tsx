@@ -1,16 +1,38 @@
+import Container from "@/components/Container";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const pp_mori = localFont({
+  src: [
+    {
+      weight: "normal",
+      path: "_fonts/PPMori-Regular.otf",
+      style: "normal",
+    },
+    {
+      weight: "bold",
+      path: "_fonts/PPMori-SemiBold.otf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-pp-mori",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const cascadia_code = localFont({
+  src: [
+    {
+      path: "_fonts/CascadiaCode-Light.otf",
+      weight: "normal",
+    },
+    {
+      path: "_fonts/CascadiaCode-Bold.otf",
+      weight: "bold",
+    },
+  ],
+  variable: "--font-cascadia-code",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +48,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pp_mori.className} ${cascadia_code.variable}  antialiased`}
       >
-        {children}
+        <div className="bg-preFooterBg w-full h-1 sticky top-0 right-0 left-0"></div>
+        <Container>
+          <Header />
+          {children}
+          <Footer />
+        </Container>
       </body>
     </html>
   );
