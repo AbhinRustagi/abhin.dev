@@ -1,0 +1,43 @@
+.renderer em {
+  @apply italic;
+}
+
+.renderer p:not(:last-child) {
+  @apply mb-4;
+}
+
+.renderer pre {
+  @apply my-6 rounded-md  p-4 text-sm break-all overflow-auto;
+}
+
+.renderer pre code {
+  @apply break-all overflow-auto;
+}
+
+.renderer p code {
+  @apply rounded-md  relative p-1 text-sm break-all overflow-auto;
+}
+
+.renderer blockquote {
+  @apply p-4 rounded-md  mb-4 text-sm;
+}
+
+.renderer blockquote p {
+  @apply text-base;
+}
+
+.renderer h2 {
+  @apply text-xl mb-4;
+}
+
+.renderer h3 {
+  @apply text-lg mb-4;
+}
+
+.renderer ul {
+  @apply mb-4 pl-4 list-disc;
+}
+
+.renderer img {
+  @apply my-6 w-full object-contain rounded;
+}

@@ -8,6 +8,7 @@
   --title: #f7f9ff;
   --accent: #ffb2a5;
   --separator: #232323;
+  --gray: #5d5d5d;
   /* --background: #fafafa;
   --foreground: #474747;
   --title: #202124;
@@ -28,7 +29,6 @@ h2,
 h3,
 h4 {
   @apply !leading-normal font-mono;
-  /* @apply !font-bold; */
   color: var(--title);
 }
 
