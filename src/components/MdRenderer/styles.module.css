@@ -1,3 +1,7 @@
+.renderer p {
+  @apply text-base font-mono leading-loose;
+}
+
 .renderer em {
   @apply italic;
 }
@@ -7,7 +11,7 @@
 }
 
 .renderer pre {
-  @apply my-6 rounded-md  p-4 text-sm break-all overflow-auto;
+  @apply my-6 rounded-md  p-4 text-sm break-all overflow-auto bg-neutral-800;
 }
 
 .renderer pre code {
@@ -19,19 +23,23 @@
 }
 
 .renderer blockquote {
-  @apply p-4 rounded-md  mb-4 text-sm;
+  @apply p-4 rounded-md  mb-4 text-sm bg-neutral-700/50;
 }
 
 .renderer blockquote p {
-  @apply text-base;
+  @apply text-base border-l border-x-slate-400 pl-4 text-sm;
+}
+
+.renderer h1 {
+  @apply text-2xl lg:text-3xl mb-4;
 }
 
 .renderer h2 {
-  @apply text-xl mb-4;
+  @apply text-xl lg:text-2xl mb-4;
 }
 
 .renderer h3 {
-  @apply text-lg mb-4;
+  @apply text-lg lg:text-xl mb-4;
 }
 
 .renderer ul {

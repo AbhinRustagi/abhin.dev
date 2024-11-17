@@ -9,20 +9,25 @@ export default async function Blog() {
 
   return (
     <React.Fragment>
-      <section className="py-20 md:py-24">
+      <section className="pt-10 md:pt-12">
         <Heading.H1 className="mb-1">Blog</Heading.H1>
         <p>Thoughts, ideas and opinions</p>
         <div className="mt-10 md:mt-12">
           {organizedPosts.map((groupedPosts) => (
             <div key={groupedPosts.date}>
-              <Heading.H2 className="font-mono mb-2 text-sm lg:text-base">
+              <Heading.H2 className="font-mono mb-2 text-sm lg:text-base text-neutral-600">
                 {groupedPosts.date}
               </Heading.H2>
               <ul>
                 {groupedPosts.posts.map((item) => (
                   <li key={item.slug} className="mb-6">
                     <div>
-                      <Link href={`/blog/${item.slug}`}>{item.title}</Link>
+                      <Link
+                        href={`/blog/${item.slug}`}
+                        className="text-neutral-100"
+                      >
+                        {item.title}
+                      </Link>
                     </div>
                   </li>
                 ))}
