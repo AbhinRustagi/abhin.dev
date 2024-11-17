@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import {
-  SlBubbles,
-  SlChemistry,
-  SlHome,
-  SlPencil,
-  SlUser,
-} from "react-icons/sl";
+import { SlChemistry, SlHome, SlPencil, SlUser } from "react-icons/sl";
 
 const navItems = [
   {
