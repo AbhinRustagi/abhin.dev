@@ -10,12 +10,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       mono: ["var(--font-cascadia-code)", "ui-monospace", "system-ui"],
-      sans: [
-        "var(--font-geist-sans)",
-        "var(--font-pp-mori)",
-        "ui-sans-serif",
-        "system-ui",
-      ],
+      sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui"],
     },
     extend: {
       colors: {
