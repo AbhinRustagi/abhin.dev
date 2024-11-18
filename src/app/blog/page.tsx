@@ -24,7 +24,7 @@ export default async function Blog() {
                     <div>
                       <Link
                         href={`/blog/${item.slug}`}
-                        className="text-neutral-100"
+                        className="text-neutral-100 hover:underline"
                       >
                         {item.title}
                       </Link>

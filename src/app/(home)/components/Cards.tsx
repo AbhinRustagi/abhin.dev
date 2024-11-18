@@ -15,7 +15,7 @@ export function About() {
         Sit consequatur odit nam pariatur, exercitationem, a hic, repellendus et
         molestiae quia itaque.
       </p>
-      <div className="mt-3 rounded inline-block overflow-hidden border border-neutral-700 hover:bg-neutral-200 transition-colors hover:text-black">
+      <div className="mt-3 rounded inline-block overflow-hidden border border-neutral-700 transition-colors hover:text-accent hover:border-accent">
         <Link href="/about" className="block py-1 px-2 text-sm">
           more about me
         </Link>
@@ -38,7 +38,7 @@ export function Blog(props: { posts: IPost[] }) {
           </li>
         ))}
       </ul>
-      <div className="mt-3 rounded inline-block overflow-hidden border border-neutral-700 hover:bg-neutral-200 transition-colors hover:text-black">
+      <div className="mt-3 rounded inline-block overflow-hidden border border-neutral-700 transition-colors hover:text-accent hover:border-accent">
         <Link href="/blog" className="block p-1 px-2 text-sm">
           view all posts
         </Link>
@@ -57,7 +57,7 @@ export function NowWidget() {
           Melbourne
         </li>
       </ul>
-      <div className="mt-3 rounded inline-block overflow-hidden border border-neutral-700 hover:bg-neutral-200 transition-colors hover:text-black">
+      <div className="mt-3 rounded inline-block overflow-hidden border border-neutral-700 transition-colors hover:text-accent hover:border-accent">
         <Link href="/blog" className="block p-1 px-2 text-sm">
           /now
         </Link>

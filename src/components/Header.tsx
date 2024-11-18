@@ -45,7 +45,7 @@ export default function Header() {
       <header className="pb-6 flex items-center justify-between md:gap-0 gap-4 flex-wrap md:flex-nowrap">
         <div>
           <Link
-            className="block py-3 px-5 rounded-md bg-neutral-100 border border-neutral-800 text-lg font-semibold text-neutral-800 font-mono hover:scale-95 transition-transform"
+            className="block py-3 px-5 rounded-md bg-accent border border-neutral-800 text-lg font-semibold text-neutral-900 font-mono hover:scale-95 transition-transform"
             href="/"
           >
             abhin.dev
@@ -56,7 +56,7 @@ export default function Header() {
             {navItems.map((item) => (
               <li
                 key={item.title}
-                className="hover:scale-95 w-16 h-16 aspect-square rounded-md border border-neutral-800 overflow-hidden hover:border-blue-300 transition-all hover:text-blue-300"
+                className="hover:scale-95 w-16 h-16 aspect-square rounded-md border border-neutral-800 overflow-hidden hover:border-accent transition-all hover:text-accent"
               >
                 <Link
                   className="cursor-pointer text-xs transition-colors flex w-full h-full flex-col items-center justify-center"
