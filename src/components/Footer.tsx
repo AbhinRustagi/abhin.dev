@@ -53,6 +53,17 @@ export default function Footer() {
           ))}
         </ul>
       </div>
+      <div className="mt-16 text-sm flex justify-between gap-4 items-center flex-wrap">
+        <p>Made with ☕️ by Abhin Rustagi</p>
+        <div className="flex gap-4 flex-wrap justify-between items-center">
+          <Link className="hover:underline" href="/sitemap">
+            Sitemap
+          </Link>
+          <Link className="hover:underline" href="/rss">
+            RSS Feed
+          </Link>
+        </div>
+      </div>
     </footer>
   );
 }
