@@ -1,10 +1,18 @@
 import Testimony from "@/components/Cards/Testimonial";
 import { Heading } from "@/components/Text";
+import generateMetadata from "@/lib/metadata";
 import AboutImage from "@/public/about.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SlLink } from "react-icons/sl";
+
+export const metadata = generateMetadata({
+  title: "About Me",
+  description:
+    "I'm a software engineer with 3 years of experience, product intuition and acute curiosity.",
+  canonical: "/about",
+});
 
 export default function AboutPage() {
   return (

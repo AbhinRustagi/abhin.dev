@@ -1,7 +1,14 @@
 import { Heading } from "@/components/Text";
 import { getIndex, groupPostsByDate } from "@/lib/blog";
+import generateMetadata from "@/lib/metadata";
 import Link from "next/link";
 import React from "react";
+
+export const metadata = generateMetadata({
+  title: "Blog",
+  description: "Thoughts, ideas and opinions",
+  canonical: "https://abhin.dev/blog",
+});
 
 export default async function Blog() {
   const posts = await getIndex();

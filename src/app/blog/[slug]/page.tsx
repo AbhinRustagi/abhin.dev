@@ -1,11 +1,23 @@
 import MdRenderer from "@/components/MdRenderer/MdRenderer";
 import { Heading } from "@/components/Text";
 import { getAllPosts, getPostBySlug, IPost } from "@/lib/blog";
+import _generateMetadata from "@/lib/metadata";
+import { Metadata } from "next";
 import Link from "next/link";
 import { SlArrowLeft } from "react-icons/sl";
 
 type Props = {
   params: { slug: string };
+};
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const data = await getPostBySlug(decodeURIComponent(props.params.slug));
+
+  return _generateMetadata({
+    title: data.metadata?.title,
+    description: data.metadata?.description,
+    canonical: `/blog/${data.metadata?.slug}`,
+  });
 };
 
 export default async function BlogPost({ params }: Props) {
@@ -14,7 +26,10 @@ export default async function BlogPost({ params }: Props) {
   return (
     <section className="pt-10 md:pt-12 max-w-2xl mx-auto">
       <div className="block mb-8">
-        <Link href="/blog" className="flex items-center gap-2 text-sm underline">
+        <Link
+          href="/blog"
+          className="flex items-center gap-2 text-sm underline"
+        >
           <SlArrowLeft className="h-3 w-3" /> all posts
         </Link>
       </div>
