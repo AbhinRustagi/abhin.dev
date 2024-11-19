@@ -65,3 +65,13 @@ export function NowWidget() {
     </div>
   );
 }
+
+export function InProgress() {
+  return (
+    <div className="py-2 px-4 mb-6 border-dotted border-4 rounded-xl border-neutral-800">
+      <p className="text-sm text-neutral-500 text-center">
+        ⚒️ &nbsp;&nbsp; in progress; some things may break
+      </p>
+    </div>
+  );
+}

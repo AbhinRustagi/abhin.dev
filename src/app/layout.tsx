@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.variable} ${cascadia_code.variable}  antialiased`}
+        className={`${GeistSans.variable} ${cascadia_code.variable} antialiased`}
       >
         <Container>
           <Header />
