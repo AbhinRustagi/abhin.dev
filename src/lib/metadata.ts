@@ -63,6 +63,9 @@ export default function generateMetadata(props?: PageMetadataProps): Metadata {
     title,
     description,
     alternates: {
+      types: {
+        "application/rss+xml": "https://www.abhin.dev/feed.xml",
+      },
       canonical,
     },
     keywords,
