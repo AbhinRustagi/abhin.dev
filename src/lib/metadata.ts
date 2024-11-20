@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import metadata from "@/data/metadata.json";
 
 interface PageMetadataProps {
   title: string;
@@ -21,53 +22,38 @@ interface PageMetadataProps {
 
 export default function generateMetadata(props?: PageMetadataProps): Metadata {
   const title = props?.title
-    ? props.title + " – Abhin Rustagi"
-    : "Abhin Rustagi – Software Engineer";
-  const description =
-    props?.description ||
-    "Software Engineer, Full Stack Developer, and Coffee enthusiast. I build things.";
+    ? metadata.titleTemplate.replace("%s", props.title)
+    : metadata.title;
+  const description = props?.description || metadata.description;
   const canonical = props?.canonical
-    ? "https://www.abhin.dev" + props.canonical
-    : "https://www.abhin.dev";
-  const keywords = props?.keywords || [
-    "Software Engineer",
-    "React",
-    "Node",
-    "Next.js",
-    "TailwindCSS",
-    "TypeScript",
-    "Coffee",
-    "University of Melbourne",
-  ];
+    ? metadata.siteUrl + props.canonical
+    : metadata.siteUrl;
+  const keywords = props?.keywords || metadata.keywords;
   const openGraph = {
+    ...metadata.openGraph,
     title,
     description,
     url: canonical,
-    type: "website",
-    image: "/og-image.png",
-    site_name: "Abhin Rustagi",
-    locale: "en_US",
+    site_name: title,
     ...props?.openGraph,
   };
   const twitter = {
     title,
     description,
-    site: "@abhinrustagi",
-    creator: "@abhinrustagi",
-    card: "summary_large_image",
-    image: "/og-image.png",
+    ...metadata.twitter,
     ...props?.twitter,
+  };
+  const alternates = {
+    types: {
+      "application/rss+xml": metadata.siteUrl + "/feed.xml",
+    },
+    canonical,
   };
 
   return {
     title,
     description,
-    alternates: {
-      types: {
-        "application/rss+xml": "https://www.abhin.dev/feed.xml",
-      },
-      canonical,
-    },
+    alternates,
     keywords,
     openGraph,
     twitter,

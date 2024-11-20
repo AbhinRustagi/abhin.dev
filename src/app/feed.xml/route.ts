@@ -1,12 +1,12 @@
 import { getAllPosts } from "@/lib/blog";
 import RSS from "rss";
+import metadata from "@/data/metadata.json";
 
 async function buildFeed() {
   const feed = new RSS({
-    title: "Abhin Rustagi – Software Engineer",
-    description:
-      "Software Engineer, Full Stack Developer, and Coffee enthusiast. I build things.",
-    site_url: "https://abhin.dev",
+    title: metadata.title,
+    description: metadata.description,
+    site_url: metadata.siteUrl,
     feed_url: `https://abhin.dev/feed.xml`,
     copyright: `${new Date().getFullYear()} Abhin Rustagi`,
     language: "en",
