@@ -64,7 +64,10 @@ export default function AboutPage() {
         </p>
         <p className="my-16 font-mono font-bold flex items-center gap-2 text-neutral-100">
           You can view my resume{" "}
-          <Link className="underline" href="">
+          <Link
+            className="underline"
+            href="https://drive.google.com/file/d/1yCCo55SJMuDMkvCu5if45Md-NAt9DRrs/view?usp=sharing"
+          >
             here
           </Link>
           <SlLink className="h-4 w-4" />
