@@ -33,11 +33,13 @@ export function Blog(props: { posts: IPost[] }) {
       <Heading.H1 className="mb-3">Writing</Heading.H1>
       <ul>
         {props.posts.map(({ metadata }) => (
-          <li
-            key={metadata.slug}
-            className="text-sm rounded-md mb-2 border border-neutral-800 p-3 transition-colors hover:bg-neutral-200 cursor-pointer hover:text-background duration-200"
-          >
-            {metadata.title}
+          <li key={metadata.slug} className="">
+            <Link
+              className="block text-sm rounded-md mb-2 border border-neutral-800 p-3 transition-colors hover:bg-neutral-200 cursor-pointer hover:text-background duration-200"
+              href={`/blog/${metadata.slug}`}
+            >
+              {metadata.title}
+            </Link>
           </li>
         ))}
       </ul>
