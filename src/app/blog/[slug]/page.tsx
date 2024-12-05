@@ -6,12 +6,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { SlArrowLeft } from "react-icons/sl";
 
-type Props = {
-  params: { slug: string };
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 export const generateMetadata = async (props: Props): Promise<Metadata> => {
-  const data = await getPostBySlug(decodeURIComponent(props.params.slug));
+  const data = await getPostBySlug(
+    decodeURIComponent((await props.params).slug)
+  );
 
   return _generateMetadata({
     title: data.metadata?.title,
@@ -21,7 +23,7 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
 };
 
 export default async function BlogPost({ params }: Props) {
-  const data = await getPostBySlug(decodeURIComponent(params.slug));
+  const data = await getPostBySlug(decodeURIComponent((await params).slug));
 
   return (
     <section className="pt-10 md:pt-12 max-w-2xl mx-auto">
