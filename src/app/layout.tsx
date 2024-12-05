@@ -5,6 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import generateMetadata from "@/lib/metadata";
 
 const cascadia_code = localFont({
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Footer />
         </Container>
       </body>
+      {process.env?.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
     </html>
   );
 }

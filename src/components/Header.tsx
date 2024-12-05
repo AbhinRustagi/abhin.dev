@@ -44,12 +44,22 @@ export default function Header() {
     <React.Fragment>
       <header className="pb-6 flex items-center justify-between md:gap-0 gap-4 flex-wrap md:flex-nowrap">
         <div>
-          <Link
-            className="block py-3 px-5 rounded-md bg-accent border border-neutral-800 text-lg font-semibold text-neutral-900 font-mono hover:scale-95 transition-transform"
-            href="/"
+          <div className="relative">
+            <Link
+              className="block py-3 px-5 rounded-md bg-neutral-50 z-10 border border-neutral-800 text-lg font-semibold text-neutral-900 font-mono"
+              href="/"
+            >
+              abhin.dev
+            </Link>
+            <div className="absolute left-1 top-1 rounded-md w-full h-full bg-accent -z-10"></div>
+          </div>
+          {/* <Link
+            className="relative font-mono font-bold p-4 block rounded-md border border-neutral-50"
+            href=""
           >
             abhin.dev
-          </Link>
+            <div className="absolute left-2 top-2 rounded-md w-full h-full"></div>
+          </Link> */}
         </div>
         <nav className="sticky top-0 overflow-hidden">
           <ul className="flex items-center justify-between gap-3">

@@ -1,11 +1,12 @@
 import Projects from "@/components/Cards/Projects";
 import { getAllPosts } from "@/lib/blog";
-import YTMusic from "@/components/Cards/YTMusic";
+import Headshot from "@/public/headshott-min copy.jpg";
 import Image from "next/image";
 import {
   About,
   Blog,
   InProgress,
+  LocationCard,
   NowWidget,
 } from "./components/Cards";
 
@@ -21,6 +22,16 @@ export default async function Home() {
           <Blog posts={posts.reverse().slice(0, 4)} />
         </div>
         <div className="flex gap-6 flex-col flex-1 h-full">
+          <div className="flex gap-6">
+            <div className="flex-1 aspect-square rounded-xl relative overflow-hidden">
+              <Image src={Headshot} alt="" fill className="object-cover" />
+            </div>
+            <div className="flex-1 aspect-square rounded-xl">
+              {/* <WakaTimeWidget /> */}
+            </div>
+            <LocationCard />
+            {/* <YTMusic /> */}
+          </div>
           <NowWidget />
           <Projects />
         </div>
