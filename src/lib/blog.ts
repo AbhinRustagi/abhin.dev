@@ -28,7 +28,12 @@ export interface GroupedPosts {
 export async function getAllPosts(): Promise<IPost[]> {
   const { tree } = await fetch(
     "https://api.github.com/repos/AbhinRustagi/blog/git/trees/main?recursive=1"
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((e: Error) => {
+      console.log(e);
+      return [];
+    });
 
   const posts = tree
     .filter((node: any) => {
@@ -41,7 +46,10 @@ export async function getAllPosts(): Promise<IPost[]> {
       return post;
     });
 
-  return Promise.all(posts);
+  return Promise.all(posts).catch((e: Error) => {
+    console.log(e.message);
+    return [];
+  });
 }
 
 const sortPosts = (posts: any): Index[] =>
