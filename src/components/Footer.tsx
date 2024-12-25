@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaBluesky, FaXTwitter } from "react-icons/fa6";
 import { Heading } from "./Text";
-import { FaTwitter, FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 const socials = [
   {
@@ -25,8 +26,14 @@ const socials = [
   {
     name: "Twitter",
     link: "https://www.twitter.com/AbhinRustagi",
-    Icon: FaTwitter,
-    background: "bg-blue-400",
+    Icon: FaXTwitter,
+    background: "bg-neutral-800",
+  },
+  {
+    name: "Bluesky",
+    link: "",
+    Icon: FaBluesky,
+    background: "bg-blue-500",
   },
 ];
 
