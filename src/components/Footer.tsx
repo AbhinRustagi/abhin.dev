@@ -40,7 +40,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="py-20 md:py-24" id="#contact">
-      <div className="p-8 rounded-xl bg-card border border-neutral-800">
+      <div className="p-8 rounded-xl bg-card">
         <Heading.H1 className="mb-3">Let&apos;s chat 💬</Heading.H1>
         <p className="mb-6">
           I&apos;m always open to new opportunities and collaborations. <br />
