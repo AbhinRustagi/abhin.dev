@@ -1,11 +1,6 @@
-import Testimony from "@/components/Cards/Testimonial";
-import { Heading } from "@/components/Text";
+import { Content } from "@/components/Cards/About";
 import generateMetadata from "@/lib/metadata";
-import AboutImage from "@/public/about.jpg";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { SlLink } from "react-icons/sl";
 
 export const metadata = generateMetadata({
   title: "About Me",
@@ -17,7 +12,8 @@ export const metadata = generateMetadata({
 export default function AboutPage() {
   return (
     <React.Fragment>
-      <section className="max-w-2xl mx-auto pt-10 md:pt-12">
+      <Content />
+      {/* <section className="max-w-2xl mx-auto pt-10 md:pt-12">
         <Heading.H1 className="mb-4">About Me</Heading.H1>
         <p className="text-xl mb-8">
           I&apos;m a software engineer with 3 years of experience, product
@@ -52,11 +48,11 @@ export default function AboutPage() {
           When I&apos;m not working, you can usually find me reading up on
           variety of things (astrophysics, cricket, finance, ∞), going for
           hikes, or photographing natural landscapes.
-        </p>
-        {/* <Heading.H2 className="uppercase text-sm lg:text-sm mb-4 text-neutral-500">
+        </p> */}
+      {/* <Heading.H2 className="uppercase text-sm lg:text-sm mb-4 text-neutral-500">
           Going on right now
         </Heading.H2>*/}
-        <Heading.H2 className="uppercase text-sm lg:text-sm mt-16 mb-4 text-neutral-500">
+      {/* <Heading.H2 className="uppercase text-sm lg:text-sm mt-16 mb-4 text-neutral-500">
           What I&apos;m Looking For
         </Heading.H2>
         <p className="mb-8">
@@ -83,7 +79,7 @@ export default function AboutPage() {
             name="Prudhvi Dharmana – Founder ReWorld Earth"
           />
         </div>
-      </section>
+      </section> */}
     </React.Fragment>
   );
 }

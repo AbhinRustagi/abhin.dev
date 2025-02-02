@@ -12,7 +12,7 @@ export default function Work() {
   return (
     <>
       <Projects />
-      <div className="mt-6 rounded-md p-6 border border-neutral-800">
+      <div className="mt-6 rounded-md p-6 border border-border">
         <Heading.H2 className="mb-2 lg:text-lg text-neutral-400">
           About my suite of personal projects
         </Heading.H2>

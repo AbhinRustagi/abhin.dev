@@ -3,7 +3,7 @@ import { Heading } from "../Text";
 
 export function PhotosWidget() {
   return (
-    <div className="flex-1 rounded-xl border border-neutral-800 aspect-square relative overflow-hidden">
+    <div className="flex-1 rounded-xl border border-border aspect-square relative overflow-hidden">
       <div className="relative h-full w-full opacity-0 hover:opacity-100 z-0 bg-white p-6 transition-all flex justify-end items-end">
         <Heading.H2 className="text-background mb-2 text-right">
           Photo of the Day
