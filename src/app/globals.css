@@ -4,19 +4,30 @@
 
 :root {
   --background: #0d0d0d;
-  --background-gradient: linear-gradient(to bottom, #0f0f0f 0%, #0d0d0d 100%);
-  --accent: rgb(254, 178, 14);
-  --card: #11111199;
+  --title: #f0f0f0;
+  --subtitle: #999;
+  --body: #888888;
+  --card: #191919;
+  --card-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+  --accent: rgb(14, 97, 254);
+  --border: #333;
+  --button: #353535;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 body {
-  @apply font-sans text-neutral-400;
+  @apply font-sans text-body;
   background-color: var(--background);
-  background-image: var(--background-gradient);
+  background-size: 40px 40px;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 1px,
+    rgba(0, 0, 0, 0) 1px
+  );
 }
 
 p,
@@ -28,7 +39,7 @@ h1,
 h2,
 h3,
 h4 {
-  @apply !leading-normal font-sans font-semibold text-neutral-200;
+  @apply !leading-normal font-sans font-medium text-title;
 }
 
 @layer utilities {

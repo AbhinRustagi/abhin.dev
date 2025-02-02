@@ -1,5 +1,5 @@
 .renderer p {
-  @apply text-base font-mono leading-loose;
+  @apply text-base leading-loose;
 }
 
 .renderer em {
@@ -31,15 +31,15 @@
 }
 
 .renderer h1 {
-  @apply text-2xl lg:text-3xl mb-4;
+  @apply text-2xl lg:text-3xl my-4 font-semibold;
 }
 
 .renderer h2 {
-  @apply text-xl lg:text-2xl mb-4;
+  @apply text-xl lg:text-2xl my-4 font-semibold;
 }
 
 .renderer h3 {
-  @apply text-lg lg:text-xl mb-4;
+  @apply text-lg lg:text-xl my-4 font-semibold;
 }
 
 .renderer ul {
