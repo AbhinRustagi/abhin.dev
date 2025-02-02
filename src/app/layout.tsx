@@ -1,12 +1,19 @@
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { GeistSans } from "geist/font/sans";
+import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import generateMetadata from "@/lib/metadata";
+import Announcement from "@/components/Announcement";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "700", "600", "500"],
+});
 
 const cascadia_code = localFont({
   src: [
@@ -32,8 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.variable} ${cascadia_code.variable} antialiased`}
+        className={`${inter.className} ${cascadia_code.variable} antialiased`}
       >
+        <Announcement />
         <Container>
           <Header />
           {children}
