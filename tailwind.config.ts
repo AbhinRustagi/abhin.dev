@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-// import tailwind default theme
 
 const config: Config = {
   content: [
@@ -10,7 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       mono: ["var(--font-cascadia-code)", "ui-monospace", "system-ui"],
-      sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui"],
+      sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
     },
     extend: {
       colors: {
@@ -22,10 +21,6 @@ const config: Config = {
         card: "var(--card)",
         border: "var(--border)",
         button: "var(--button)",
-      },
-      backgroundImage: {
-        ytm: "linear-gradient(-45deg, rgba(255,8,68,0.45) 0%, rgba(255,117,140,0) 100%)",
-        buttonGradient: "linear-gradient(60deg, #96deda 0%, #50c9c3 100%);",
       },
     },
   },

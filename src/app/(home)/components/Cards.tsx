@@ -51,7 +51,7 @@ export function Blog(props: { posts: IPost[] }) {
         {props.posts.map(({ metadata }) => (
           <li key={metadata.slug} className="list-disc">
             <Link
-              className="block mb-4 cursor-pointer hover:text-title"
+              className="block mb-2 cursor-pointer hover:text-title"
               href={`/blog/${metadata.slug}`}
             >
               {metadata.title}
