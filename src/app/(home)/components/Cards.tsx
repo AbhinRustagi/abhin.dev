@@ -35,8 +35,9 @@ export function About() {
         everything from distributed databases to data-driven dashboards. I also
         lead tech projects at ReWorld Earth and CISSA.
       </p>
-      <div className="mt-4">
+      <div className="mt-6 flex gap-3">
         <Button text="more about me" href="/about" />
+        <Button text="resume" href="https://abhin.dev/resume.pdf" />
       </div>
     </div>
   );

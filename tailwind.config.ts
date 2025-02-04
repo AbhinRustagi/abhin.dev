@@ -25,8 +25,6 @@ const config: Config = {
       },
       backgroundImage: {
         ytm: "linear-gradient(-45deg, rgba(255,8,68,0.45) 0%, rgba(255,117,140,0) 100%)",
-        // buttonGradient:
-        //   "linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);",
         buttonGradient: "linear-gradient(60deg, #96deda 0%, #50c9c3 100%);",
       },
     },
