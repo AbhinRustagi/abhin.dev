@@ -1,5 +1,5 @@
 .renderer p {
-  @apply text-base leading-loose;
+  @apply text-base leading-loose text-body;
 }
 
 .renderer em {
@@ -11,7 +11,7 @@
 }
 
 .renderer pre {
-  @apply my-6 rounded-md  p-4 text-sm break-all overflow-auto bg-neutral-800;
+  @apply my-6 rounded-md p-4 text-sm break-all overflow-auto bg-neutral-800;
 }
 
 .renderer pre code {
@@ -19,31 +19,35 @@
 }
 
 .renderer p code {
-  @apply rounded-md  relative p-1 text-sm break-all overflow-auto;
+  @apply rounded-md relative p-1 text-sm break-all overflow-auto;
 }
 
 .renderer blockquote {
-  @apply p-4 rounded-md  mb-4 text-sm bg-neutral-700/50;
+  @apply p-4 rounded-md mb-4 text-sm bg-neutral-700/50;
 }
 
 .renderer blockquote p {
-  @apply text-base border-l border-x-slate-400 pl-4 text-sm;
+  @apply border-l border-x-slate-400 pl-4 text-sm;
 }
 
 .renderer h1 {
-  @apply text-2xl lg:text-3xl my-4 font-semibold;
+  @apply text-xl my-4 font-medium;
 }
 
 .renderer h2 {
-  @apply text-xl lg:text-2xl my-4 font-semibold;
+  @apply text-lg my-4 font-medium;
 }
 
 .renderer h3 {
-  @apply text-lg lg:text-xl my-4 font-semibold;
+  @apply text-lg my-4 font-medium;
 }
 
 .renderer ul {
-  @apply mb-4 pl-4 list-disc;
+  @apply mb-4 pl-10 list-disc text-body;
+}
+
+.renderer ul li {
+  @apply my-2;
 }
 
 .renderer img {

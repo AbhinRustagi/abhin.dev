@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import MdRenderer from "@/components/MdRenderer/MdRenderer";
 import { getAllPosts, getPostBySlug, IPost } from "@/lib/blog";
 import _generateMetadata from "@/lib/metadata";
@@ -25,16 +26,11 @@ export default async function BlogPost({ params }: Props) {
   const data = await getPostBySlug(decodeURIComponent((await params).slug));
 
   return (
-    <section className="pt-10 md:pt-12 max-w-2xl mx-auto">
-      <div className="block mb-8">
-        <Link
-          href="/blog"
-          className="flex items-center gap-2 text-sm underline"
-        >
-          <SlArrowLeft className="h-3 w-3" /> all posts
-        </Link>
+    <section className="max-w-2xl mx-auto">
+      <div className="mb-8">
+        <Button text="all posts" href="/blog" direction="backward" />
       </div>
-      <h1 className="mb-8">{data.metadata?.title}</h1>
+      <h1 className="mb-6 text-xl">{data.metadata?.title}</h1>
       <div className="text-gray-300">
         <MdRenderer content={data.content} />
       </div>

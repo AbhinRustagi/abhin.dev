@@ -2,6 +2,7 @@ import { getIndex, groupPostsByDate } from "@/lib/blog";
 import generateMetadata from "@/lib/metadata";
 import Link from "next/link";
 import React from "react";
+import Button from "@/components/Button";
 
 export const metadata = generateMetadata({
   title: "Blog",
@@ -15,7 +16,10 @@ export default async function Blog() {
 
   return (
     <React.Fragment>
-      <section className="pt-10 md:pt-12">
+      <div className="mb-8">
+        <Button direction="backward" href="/" text="home" />
+      </div>
+      <section>
         <h1 className="mb-1">Blog</h1>
         <p className="text-subtitle">Thoughts, ideas and opinions</p>
         <div className="mt-10 md:mt-12">

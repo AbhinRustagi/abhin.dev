@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import generateMetadata from "@/lib/metadata";
 import Link from "next/link";
 
@@ -9,8 +10,10 @@ export const metadata = generateMetadata({
 export default function Work() {
   return (
     <>
-      {/* <Projects /> */}
-      <div className="mt-6 rounded-md p-6 border border-border">
+      <div className="mb-6">
+        <Button text="home" href="/" direction="backward" />
+      </div>
+      <div className="rounded-md p-6 border border-border">
         <h2 className="mb-2 lg:text-lg text-neutral-400">
           About my suite of personal projects
         </h2>
