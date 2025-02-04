@@ -1,8 +1,6 @@
+import NotFoundMeme from "@/public/404.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import NotFoundMeme from "@/public/404.jpg";
-import React from "react";
-import { Heading } from "@/components/Text";
 
 export default function NotFound() {
   return (
@@ -12,7 +10,7 @@ export default function NotFound() {
           <Image src={NotFoundMeme} alt="" />
         </div>
         <div className="md:flex-1">
-          <Heading.H1>404: Not Found</Heading.H1>
+          <h1>404: Not Found</h1>
           <p>Could not find requested resource</p>
           <Link href="/" className="underline mt-4 inline-block">
             Return Home

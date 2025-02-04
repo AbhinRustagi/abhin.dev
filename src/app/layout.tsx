@@ -1,13 +1,12 @@
+import Announcement from "@/components/Announcement";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import { Inter } from "next/font/google";
+import generateMetadata from "@/lib/metadata";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import generateMetadata from "@/lib/metadata";
-import Announcement from "@/components/Announcement";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,7 +42,6 @@ export default function RootLayout({
       >
         <Announcement />
         <Container>
-          <Header />
           {children}
           <Footer />
         </Container>

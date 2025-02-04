@@ -1,20 +1,19 @@
 import Link from "next/link";
-import { Heading } from "../Text";
 import Testimony from "./Testimonial";
 
 export const Content = () => {
   return (
     <>
       <div className="w-2/3 rounded-xl p-10 bg-card mb-12">
-        <Heading.H1 className="text-xl mb-8">
+        <h1 className="text-xl mb-8">
           Software Engineer{" "}
           <span className="text-subtitle">
             with product intuition and acute curiosity.
           </span>
-        </Heading.H1>
-        <Heading.H2 className="uppercase text-sm lg:text-sm mb-2 text-subtitle">
+        </h1>
+        <h2 className="uppercase text-sm lg:text-sm mb-2 text-subtitle">
           Journey so far
-        </Heading.H2>
+        </h2>
         <p className="mb-2">
           I was born and raised in New Delhi. Currently I reside in Melbourne,
           Australia. Prior to moving to Melbourne in 2023, I worked with various
@@ -35,9 +34,9 @@ export const Content = () => {
         {/* <Heading.H2 className="uppercase text-sm lg:text-sm mb-4 text-neutral-500">
           Going on right now
         </Heading.H2>*/}
-        <Heading.H2 className="uppercase text-sm lg:text-sm mt-8 mb-2 text-subtitle">
+        <h2 className="uppercase text-sm lg:text-sm mt-8 mb-2 text-subtitle">
           What I&apos;m Looking For
-        </Heading.H2>
+        </h2>
         <p>
           Impactful, purposeful work with a diverse team of talented people.
         </p>
@@ -54,7 +53,7 @@ export const Content = () => {
           Resume
         </Link>
       </div>
-      <Heading.H2>Good folks I&apos;ve worked with</Heading.H2>
+      <h2>Good folks I&apos;ve worked with</h2>
       <div className="mt-8 flex gap-6 flex-wrap lg:flex-nowrap">
         <Testimony
           message="Working with Abhin at Virtetic was an absolute pleasure. Abhin has flawless work ethic, he is an amazing team member, and his work is of the upmost quality."

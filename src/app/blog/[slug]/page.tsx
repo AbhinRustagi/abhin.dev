@@ -1,5 +1,4 @@
 import MdRenderer from "@/components/MdRenderer/MdRenderer";
-import { Heading } from "@/components/Text";
 import { getAllPosts, getPostBySlug, IPost } from "@/lib/blog";
 import _generateMetadata from "@/lib/metadata";
 import { Metadata } from "next";
@@ -35,7 +34,7 @@ export default async function BlogPost({ params }: Props) {
           <SlArrowLeft className="h-3 w-3" /> all posts
         </Link>
       </div>
-      <Heading.H1 className="mb-8">{data.metadata?.title}</Heading.H1>
+      <h1 className="mb-8">{data.metadata?.title}</h1>
       <div className="text-gray-300">
         <MdRenderer content={data.content} />
       </div>

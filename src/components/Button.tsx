@@ -7,14 +7,12 @@ interface ButtonProps {
 
 export default function Button(props: ButtonProps) {
   return (
-    <div className="rounded inline-block transition-colors cursor-pointer p-px">
+    <div className="rounded inline-block transition-colors cursor-pointer bg-button">
       <Link
         href={props.href}
-        className="block text-sm font-medium bg-button rounded"
+        className="text-sm font-medium hover:text-title rounded block transition-colors py-2 px-3"
       >
-        <span className="block transition-colors py-2 px-3 bg-clip-text hover:bg-buttonGradient text-transparent bg-body">
-          {props.text}
-        </span>
+        {props.text} {">"}
       </Link>
     </div>
   );

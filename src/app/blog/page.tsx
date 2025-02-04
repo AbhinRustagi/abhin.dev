@@ -1,4 +1,3 @@
-import { Heading } from "@/components/Text";
 import { getIndex, groupPostsByDate } from "@/lib/blog";
 import generateMetadata from "@/lib/metadata";
 import Link from "next/link";
@@ -17,14 +16,14 @@ export default async function Blog() {
   return (
     <React.Fragment>
       <section className="pt-10 md:pt-12">
-        <Heading.H1 className="mb-1">Blog</Heading.H1>
+        <h1 className="mb-1">Blog</h1>
         <p className="text-subtitle">Thoughts, ideas and opinions</p>
         <div className="mt-10 md:mt-12">
           {organizedPosts.map((groupedPosts) => (
             <div key={groupedPosts.date}>
-              <Heading.H2 className="mb-2 text-sm lg:text-base text-subtitle">
+              <h2 className="mb-2 text-sm lg:text-base text-subtitle">
                 {groupedPosts.date}
-              </Heading.H2>
+              </h2>
               <ul>
                 {groupedPosts.posts.map((item) => (
                   <li key={item.slug} className="mb-6 lg:pl-4">

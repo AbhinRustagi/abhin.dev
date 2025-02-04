@@ -1,26 +1,42 @@
 "use client";
 
 import Button from "@/components/Button";
-import { Heading } from "@/components/Text";
 import { IPost } from "@/lib/blog";
+import Image from "next/image";
 import Link from "next/link";
+import AvatarImage from "@/public/DSC_0650.jpg";
+
+export function Avatar() {
+  return (
+    <div className="rounded-full aspect-square overflow-hidden w-20 h-20 mb-10">
+      <Image
+        width={80}
+        height={80}
+        src={AvatarImage}
+        className="object-cover"
+        alt="Abhin Rustagi"
+      />
+    </div>
+  );
+}
 
 export function About() {
   return (
-    <div className="rounded-xl p-8 bg-card">
-      <Heading.H1>Hello, I&apos;m Abhin</Heading.H1>
+    <div className="mb-10">
+      <h1 className="text-xl">Hello, I&apos;m Abhin</h1>
       <p className="mb-4 text-sm text-subtitle">pronounced /ab-hin/</p>
-      <p>
-        A software engineer passionate about creating impactful digital products
-        that empower people and promote autonomy. I thrive in dynamic
-        environments, blending creativity, collaboration, and meticulous
-        attention to detail to craft solutions that resonate with users.
-        Currently, I’m focused on AI, automation, and driving innovation. When
-        I’m not building software, you’ll find me enjoying a good book, hiking
-        trails, or savoring a great cup of coffee.
+      <p className="mb-4">
+        I am a final semester Masters of IT student at the University of
+        Melbourne, specializing in AI. I&apos;m passionate about building
+        scalable, efficient, and impactful technology.
       </p>
-      <div className="mt-3">
-        <Button text="about me" href="/about" />
+      <p>
+        I’ve worked with startups like Openhouse and Virtetic, developing
+        everything from distributed databases to data-driven dashboards. I also
+        lead tech projects at ReWorld Earth and CISSA.
+      </p>
+      <div className="mt-4">
+        <Button text="more about me" href="/about" />
       </div>
     </div>
   );
@@ -28,13 +44,13 @@ export function About() {
 
 export function Blog(props: { posts: IPost[] }) {
   return (
-    <div className="p-8 rounded-xl relative bg-card">
-      <Heading.H1 className="mb-3">Writing</Heading.H1>
-      <ul>
+    <div className="mb-10">
+      <h2 className="mb-3 text-lg">Writing</h2>
+      <ul className="pl-4">
         {props.posts.map(({ metadata }) => (
-          <li key={metadata.slug} className="">
+          <li key={metadata.slug} className="list-disc">
             <Link
-              className="block text-sm rounded-md mb-2 border border-border p-3 transition-colors hover:bg-neutral-200 cursor-pointer hover:text-background duration-200"
+              className="block mb-4 cursor-pointer hover:text-title"
               href={`/blog/${metadata.slug}`}
             >
               {metadata.title}
@@ -42,7 +58,7 @@ export function Blog(props: { posts: IPost[] }) {
           </li>
         ))}
       </ul>
-      <div className="mt-3">
+      <div className="mt-6">
         <Button text="view all posts" href="/blog" />
       </div>
     </div>
@@ -52,7 +68,7 @@ export function Blog(props: { posts: IPost[] }) {
 export function NowWidget() {
   return (
     <div className="p-6 flex-1 rounded-xl">
-      <Heading.H2 className="mb-2 font-mono">now</Heading.H2>
+      <h2 className="mb-2 font-mono">now</h2>
       <ul className="list-disc pl-4">
         <li className="text-sm">
           Completing my Masters of IT (final sem, yay!) from the University of
@@ -64,16 +80,6 @@ export function NowWidget() {
           /now
         </Link>
       </div>
-    </div>
-  );
-}
-
-export function LocationCard() {
-  return (
-    <div className="aspect-square p-2 flex-1 flex rounded-xl flex-col justify-center items-center">
-      {/* <Heading.H2 className="mb-2 font-mono">location</Heading.H2> */}
-      <p className="text-sm text-neutral-100">📍 Melbourne</p>
-      <p className="text-sm ">6:10 PM</p>
     </div>
   );
 }
