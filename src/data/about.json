@@ -1,0 +1,30 @@
+[
+  {
+    "section_name": "about",
+    "title": {
+      "primary": "Software Engineer",
+      "secondary": " with product intuition and acute curiosity."
+    },
+    "body": [
+      "I was born and raised in New Delhi. Currently I reside in Melbourne, Australia. Prior to moving to Melbourne in 2023, I worked with various small and mid-size teams as a software engineer. I have worked at Openhouse, ReWorld Earth, Wetlands International, Virtetic, and more.",
+      "I migrated to Melbourne to study a Masters of IT, and specialize in Artificial Intelligence. I completed a Bachelor of Science in Statistics from University of Delhi before this, sharpening my analytical and critical skills.",
+      "When I'm not working, you can usually find me reading up on variety of things (astrophysics, cricket, finance, ∞), going for hikes, or photographing natural landscapes."
+    ]
+  },
+  {
+    "section_name": "testimonials",
+    "title": {
+      "primary": "Good folks I've worked with"
+    },
+    "testimonies": [
+      {
+        "message": "Working with Abhin at Virtetic was an absolute pleasure. Abhin has flawless work ethic, he is an amazing team member, and his work is of the upmost quality.",
+        "person": "Ricardo Garcia Rosas – CEO Virtetic"
+      },
+      {
+        "message": "Abhin is reliable, with strong ownership and passion. He is calm and can work under high pressure with crazy deadlines. He&apos;s got an amazing growth mindset and always looking for ways to improve.",
+        "person": "Prudhvi Dharmana – Founder ReWorld Earth"
+      }
+    ]
+  }
+]

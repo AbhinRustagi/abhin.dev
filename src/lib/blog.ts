@@ -32,8 +32,12 @@ export async function getAllPosts(): Promise<IPost[]> {
     .then((res) => res.json())
     .catch((e: Error) => {
       console.log(e);
-      return [];
+      return {
+        tree: [],
+      };
     });
+
+  console.log(tree);
 
   const posts = tree
     .filter((node: any) => {
