@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import { IPost } from "@/lib/blog";
 import Image from "next/image";
 import Link from "next/link";
-import AvatarImage from "@/public/DSC_0650.jpg";
+import AvatarImage from "@/public/avatar.jpg";
 
 export function Avatar() {
   return (
